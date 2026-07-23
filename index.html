@@ -286,9 +286,9 @@
               <div class="footer__contact">
                 <p class="footer__sub-link">Our socials</p>
                 <div class="footer__socials">
-                  <a href="#" class="footer__social-link footer__social-link--facebook"></a>
-                  <a href="#" class="footer__social-link footer__social-link--twitter"></a>
-                  <a href="#" class="footer__social-link footer__social-link--instagram"></a>
+                  <a href="https://www.facebook.com/" class="footer__social-link footer__social-link--facebook"></a>
+                  <a href="https://x.com/" class="footer__social-link footer__social-link--twitter"></a>
+                  <a href="http://instagram.com/" class="footer__social-link footer__social-link--instagram"></a>
                 </div>
               </div>
             </div>
@@ -344,14 +344,20 @@
       const sliderLeftButton = document.querySelector('.header__arrow--left');
       const sliderRightButton = document.querySelector('.header__arrow--right');
       const headerSlider = document.querySelector('.header__slider');
+
       function setSliderImage(number) {
         headerSlider.style.backgroundImage = `url(\'src/images/slider/slide-img-${number}.jpg\')`;
-
       }
 
       let imageNumber = 1;
       let maxImageNumber = 4;
       let minImageNumber = 1;
+
+      for (let i = minImageNumber; i <= maxImageNumber; i++) {
+        const tempImage = new Image();
+        tempImage.src = `url(\'src/images/slider/slide-img-${i}.jpg\')`;
+      }
+
       sliderLeftButton.addEventListener('click', () => {
         if (imageNumber - 1 < minImageNumber) imageNumber = maxImageNumber;
         else imageNumber--;

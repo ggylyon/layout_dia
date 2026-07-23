@@ -63,9 +63,12 @@
   background-color: $color-7;
 
   transition: all $transition-time;
+
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
+
+
 
   @include on('small') {
     grid-column: span 4;
