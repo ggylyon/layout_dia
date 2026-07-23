@@ -347,7 +347,7 @@
       const headerSlider = document.querySelector('.header__slider');
 
       function setSliderImage(number) {
-        headerSlider.style.backgroundImage = `url(\'/images/slider/slide-img-${number}.jpg\')`;
+        headerSlider.style.backgroundImage = `url(\'${import.meta.env.BASE_URL}images/slider/slide-img-${number}.jpg\')`;
       }
 
       setSliderImage(1);
