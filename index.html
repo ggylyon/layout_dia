@@ -12,6 +12,24 @@
       href="src/styles/main.scss"
     />
     <link rel="icon" href="src/images/logo/dia-logo.svg">
+    <link
+      rel="preload"
+      href="src/images/slider/slide-img-2.jpg"
+      as="image"
+      type="image/jpg"
+    />
+    <link
+      rel="preload"
+      href="src/images/slider/slide-img-3.jpg"
+      as="image"
+      type="image/jpg"
+    />
+    <link
+      rel="preload"
+      href="src/images/slider/slide-img-4.jpg"
+      as="image"
+      type="image/jpg"
+    />
   </head>
   <body>
     <nav class="navigation">
@@ -352,11 +370,6 @@
       let imageNumber = 1;
       let maxImageNumber = 4;
       let minImageNumber = 1;
-
-      for (let i = minImageNumber; i <= maxImageNumber; i++) {
-        const tempImage = new Image();
-        tempImage.src = `\'src/images/slider/slide-img-${i}.jpg\'`;
-      }
 
       sliderLeftButton.addEventListener('click', () => {
         if (imageNumber - 1 < minImageNumber) imageNumber = maxImageNumber;
