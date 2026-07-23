@@ -12,24 +12,7 @@
       href="src/styles/main.scss"
     />
     <link rel="icon" href="src/images/logo/dia-logo.svg">
-    <link
-      rel="preload"
-      href="src/images/slider/slide-img-2.jpg"
-      as="image"
-      type="image/jpg"
-    />
-    <link
-      rel="preload"
-      href="src/images/slider/slide-img-3.jpg"
-      as="image"
-      type="image/jpg"
-    />
-    <link
-      rel="preload"
-      href="src/images/slider/slide-img-4.jpg"
-      as="image"
-      type="image/jpg"
-    />
+
   </head>
   <body>
     <nav class="navigation">
@@ -364,9 +347,10 @@
       const headerSlider = document.querySelector('.header__slider');
 
       function setSliderImage(number) {
-        headerSlider.style.backgroundImage = `url(\'src/images/slider/slide-img-${number}.jpg\')`;
+        headerSlider.style.backgroundImage = `url(\'/images/slider/slide-img-${number}.jpg\')`;
       }
 
+      setSliderImage(1);
       let imageNumber = 1;
       let maxImageNumber = 4;
       let minImageNumber = 1;

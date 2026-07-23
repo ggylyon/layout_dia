@@ -68,8 +68,6 @@
     transform: scale(1.05);
   }
 
-
-
   @include on('small') {
     grid-column: span 4;
   }
